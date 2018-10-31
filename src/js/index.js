@@ -25,7 +25,7 @@ function alterTime(){
         horas = 0;
     }
     
-    time = setTimeout(alterTime, 1000);
+    time = setTimeout(alterTime, 1000); //modificar tempo para testes
 }
 
 function startTime(){
