@@ -3,12 +3,12 @@ let minutos = 0;
 let horas = 0; 
 let time;
 let time_on = 0;
-// let real_por_minuto = 0.25; valor estatico
 let real_por_minuto = document.getElementById("valor_usuario").value;
 
 
 //altera o valor de segundos, horas e minutos
 function alterTime(){
+
     
     document.getElementById("segundos").innerHTML = ":" + segundos; 
     segundos++;
@@ -17,8 +17,7 @@ function alterTime(){
     if(segundos == 60){
         segundos = 0;
         minutos++;
-        //real_por_minuto = real_por_minuto + 0.25;
-        let real = real_por_minuto/60;
+        let real = real_por_minuto/60; 
         if(minutos < 10){minutos = "0"+minutos}
         document.getElementById("minutos").innerHTML = ":" + minutos; 
         document.getElementById("placar").innerHTML = "R$" + real; 
@@ -37,14 +36,6 @@ function alterTime(){
     
     time = setTimeout(alterTime, 1); //modificar tempo para testes
 }
-
-//15 reais dividido por 60m = 0,25c por minuto,
-//para cada minuto que se passar acrescenta + 0,25c
-
-//pegar valor digitado pelo usuario, gravar ele em uma variavel 
-//pegar valor e dividir por 60m = valor por minuto
-
-
 
 //inicia o cronometro
 function startTime(){

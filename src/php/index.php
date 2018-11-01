@@ -16,7 +16,7 @@
 
     <div class="valor" >
        
-        <input type="number" id="valor_usuario" placeholder="Valor hora de trabalho"><br>
+        <input type="text" id="valor_usuario" placeholder="Valor hora de trabalho"><br>
         <span id="placar">R$00,00</span> 
     </div>
     
