@@ -3,8 +3,8 @@ let minutos = 0;
 let horas = 0; 
 let time;
 let time_on = 0;
-let real_por_minuto = 0.25; //valor estatico
-//let real_por_minuto = document.getElementById("valor_usuario").value;
+// let real_por_minuto = 0.25; valor estatico
+let real_por_minuto = document.getElementById("valor_usuario").value;
 
 
 //altera o valor de segundos, horas e minutos
@@ -17,11 +17,11 @@ function alterTime(){
     if(segundos == 60){
         segundos = 0;
         minutos++;
-        real_por_minuto = real_por_minuto + 0.25;
-        //let real = real_por_minuto/60;
+        //real_por_minuto = real_por_minuto + 0.25;
+        let real = real_por_minuto/60;
         if(minutos < 10){minutos = "0"+minutos}
         document.getElementById("minutos").innerHTML = ":" + minutos; 
-        document.getElementById("placar").innerHTML = "R$" + real_por_minuto; 
+        document.getElementById("placar").innerHTML = "R$" + real; 
     }
 
     if(minutos == 60){
