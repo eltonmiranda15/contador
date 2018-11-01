@@ -13,6 +13,11 @@
         <span class="cronometro" id="minutos">:00</span>
         <span class="cronometro" id="segundos">:00</span>
     </div>
+
+    <div class="valor" >
+        <span id="placar">R$00,00</span> 
+    
+    </div>
     
 
     <div class="botoes">

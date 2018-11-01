@@ -3,7 +3,9 @@ let minutos = 0;
 let horas = 0; 
 let time;
 let time_on = 0;
+let real_por_minuto = 0.25; //valor estatico
 
+//altera o valor de segundos, horas e minutos
 function alterTime(){
     
     document.getElementById("segundos").innerHTML = ":" + segundos; 
@@ -13,8 +15,10 @@ function alterTime(){
     if(segundos == 60){
         segundos = 0;
         minutos++;
+        real_por_minuto = real_por_minuto + 0.25;
         if(minutos < 10){minutos = "0"+minutos}
         document.getElementById("minutos").innerHTML = ":" + minutos; 
+        document.getElementById("placar").innerHTML = "R$" + real_por_minuto; 
     }
 
     if(minutos == 60){
@@ -31,6 +35,12 @@ function alterTime(){
     time = setTimeout(alterTime, 1); //modificar tempo para testes
 }
 
+//15 reais dividido por 60m = 0,25c por minuto,
+//para cada minuto que se passar acrescenta + 0,25c
+
+
+
+//inicia o cronometro
 function startTime(){
     if(!time_on){
         time_on = 1;
@@ -38,15 +48,20 @@ function startTime(){
     }
 }
 
+//para o cronometro
 function stopTime(){
     clearTimeout(time); 
     time_on = 0;
 }
 
+//reinicia o cronometro
 function resetTime(){
-    document.getElementById("horas").innerHTML = "00";
-    document.getElementById("minutos").innerHTML = ":00";
-    document.getElementById("segundos").innerHTML = ":00";
+    
+    //fazer com que ao clicar no resetTime() ele apague o cronometro e inicie novamente do 0
 
+        document.getElementById("horas").innerHTML = "00";
+        document.getElementById("minutos").innerHTML = ":00";
+        document.getElementById("segundos").innerHTML = ":00";
+        document.getElementById("placar").innerHTML = "R$00,00";
 }
 
