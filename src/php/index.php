@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="contador">
-        <div class="cronometro" id="horas">00</div>
-        <div class="cronometro" id="minutos">:00</div>
-        <div class="cronometro" id="segundos" >:00</div>
+        <span class="cronometro" id="horas">00</span>
+        <span class="cronometro" id="minutos">:00</span>
+        <span class="cronometro" id="segundos">:00</span>
     </div>
     
 

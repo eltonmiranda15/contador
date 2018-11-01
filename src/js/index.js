@@ -5,15 +5,16 @@ let time;
 let time_on = 0;
 
 function alterTime(){
+    
     document.getElementById("segundos").innerHTML = ":" + segundos; 
-    segundos = segundos + 1; 
+    segundos++;
+    if(segundos < 10){segundos = "0"+segundos}
 
     if(segundos == 60){
         segundos = 0;
         minutos++;
         if(minutos < 10){minutos = "0"+minutos}
         document.getElementById("minutos").innerHTML = ":" + minutos; 
-    
     }
 
     if(minutos == 60){
