@@ -15,13 +15,14 @@
     </div>
 
     <div class="valor" >
+       
+        <!--<input type="number" id="valor_usuario" placeholder="Valor hora de trabalho"><br>-->
         <span id="placar">R$00,00</span> 
-    
     </div>
     
 
     <div class="botoes">
-        <span><input type="button" value="Iniciar" onclick="startTime()"></span>
+        <span><input type="submit" value="Iniciar" onclick="startTime()"></span>
         <span><input type="button" value="Parar" onclick="stopTime()"></span>
         <span><input type="button" value="Reiniciar" onclick="resetTime()"></span>
     </div>
