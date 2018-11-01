@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../scss/index.css">
 </head>
 <body>
+<div class="campo-cronometro">
     <div class="contador">
         <span class="cronometro" id="horas">00</span>
         <span class="cronometro" id="minutos">:00</span>
@@ -16,16 +17,18 @@
 
     <div class="valor" >
        
-        <input type="text" id="valor_usuario" placeholder="Valor hora de trabalho"><br>
+        <input type="number" class="campo-valor" id="valor_usuario" placeholder="Valor hora de trabalho"><br>
         <span id="placar">R$00,00</span> 
     </div>
     
 
     <div class="botoes">
-        <span><input type="submit" value="Iniciar" onclick="startTime()"></span>
-        <span><input type="button" value="Parar" onclick="stopTime()"></span>
-        <span><input type="button" value="Reiniciar" onclick="resetTime()"></span>
+        <span><input type="submit" class="botao-iniciar"value="Iniciar" onclick="startTime()"></span>
+        <span><input type="button" class="botao-parar"value="Parar" onclick="stopTime()"></span>
+        <span><input type="button" class="botao-reiniciar"value="Reiniciar" onclick="resetTime()"></span>
     </div>
+</div>
+    
 
    <script src="../js/index.js"></script>
 </body>
