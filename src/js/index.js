@@ -11,6 +11,7 @@ function alterTime(){
     if(segundos == 60){
         segundos = 0;
         minutos++;
+        if(minutos < 10){minutos = "0"+minutos}
         document.getElementById("minutos").innerHTML = ":" + minutos; 
     
     }
@@ -18,6 +19,7 @@ function alterTime(){
     if(minutos == 60){
         minutos = 0;
         horas++;
+        if(horas < 10){horas = "0"+horas}
         document.getElementById("horas").innerHTML = horas; 
     }
 
@@ -25,7 +27,7 @@ function alterTime(){
         horas = 0;
     }
     
-    time = setTimeout(alterTime, 1000); //modificar tempo para testes
+    time = setTimeout(alterTime, 1); //modificar tempo para testes
 }
 
 function startTime(){
@@ -38,5 +40,12 @@ function startTime(){
 function stopTime(){
     clearTimeout(time); 
     time_on = 0;
+}
+
+function resetTime(){
+    document.getElementById("horas").innerHTML = "00";
+    document.getElementById("minutos").innerHTML = ":00";
+    document.getElementById("segundos").innerHTML = ":00";
+
 }
 

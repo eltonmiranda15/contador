@@ -16,8 +16,9 @@
     
 
     <div class="botoes">
-        <span><input type="button" value="Iniciar contagem" onclick="startTime()"></span>
-        <span><input type="button" value="Parar contagem" onclick="stopTime()"></span>
+        <span><input type="button" value="Iniciar" onclick="startTime()"></span>
+        <span><input type="button" value="Parar" onclick="stopTime()"></span>
+        <span><input type="button" value="Reiniciar" onclick="resetTime()"></span>
     </div>
 
    <script src="../js/index.js"></script>
