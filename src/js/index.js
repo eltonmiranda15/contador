@@ -20,7 +20,7 @@ function alterTime(){
         let real = real_por_minuto/60; 
         if(minutos < 10){minutos = "0"+minutos}
         document.getElementById("minutos").innerHTML = ":" + minutos; 
-        document.getElementById("placar").innerHTML = "R$" + real; 
+        document.getElementById("placar").innerHTML = "<span class='valor-total'>Valor total por minuto</span> <br> R$" + real; 
     }
 
     if(minutos == 60){

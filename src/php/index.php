@@ -16,9 +16,14 @@
     </div>
 
     <div class="valor" >
-       
-        <input type="number" class="campo-valor" id="valor_usuario" placeholder="Valor hora de trabalho"><br>
-        <span id="placar">R$00,00</span> 
+       <label for="">
+           <span class="label1">Insira aqui o valor da sua hora de trabalho: </span><br>
+           <span class="label2">R$</span>
+       <input type="number" class="campo-valor" id="valor_usuario" placeholder="Ex:15,00">
+       </label>
+      <br>
+        
+        <span id="placar"><span class="valor-total">Valor total por minuto</span> <br> R$00,00</span> 
     </div>
     
 
