@@ -19,18 +19,22 @@
        <label for="">
            <span class="label1">Insira aqui o valor da sua hora de trabalho: </span><br>
            <span class="label2">R$</span>
-       <input type="number" class="campo-valor" id="valor_usuario" placeholder="Ex:15,00">
+       <input type="number" class="campo-valor" id="valor_usuario" placeholder="Ex:15,00" value="15">
        </label>
       <br>
         
-        <span id="placar"><span class="valor-total">Valor total por minuto</span> <br> R$00,00</span> 
+        <div>
+            <span class="valor-total">Valor total por minuto</span><br>
+            R$ <span id="placar">0.000</span>
+        </div>
     </div>
     
 
     <div class="botoes">
-        <span><input type="submit" class="botao-iniciar"value="Iniciar" onclick="startTime()"></span>
-        <span><input type="button" class="botao-parar"value="Parar" onclick="stopTime()"></span>
-        <span><input type="button" class="botao-reiniciar"value="Reiniciar" onclick="resetTime()"></span>
+        <span><input type="submit" class="botao-acao botao-iniciar"value="Iniciar" onclick="startTime()"></span>
+        <span><input type="button" class="botao-acao botao-parar"value="Parar" onclick="stopTime()"></span>
+        <span><input type="button" class="botao-acao botao-reiniciar"value="Reiniciar" onclick="resetTime()"></span>
+        <span><input type="button" class="botao-acao botao-zerar"value="Zerar" onclick="zerar()"></span>
     </div>
 </div>
     
