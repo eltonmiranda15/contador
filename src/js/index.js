@@ -6,15 +6,13 @@ let time_on = 0;
 let real_por_minuto = document.getElementById("valor_usuario").value;
 
 
-//altera o valor de segundos, horas e minutos
+// altera o valor de segundos, horas e minutos
 function alterTime(){
-
-    
     document.getElementById("segundos").innerHTML = ":" + segundos; 
     segundos++;
-    if(segundos < 10){segundos = "0"+segundos}
+    if (segundos < 10) { segundos = "0" + segundos }
 
-    if(segundos == 60){
+    if (segundos == 60) {
         segundos = 0;
         minutos++;
         let real = real_por_minuto/60; 
@@ -23,21 +21,21 @@ function alterTime(){
         document.getElementById("placar").innerHTML = "<span class='valor-total'>Valor total por minuto</span> <br> R$" + real; 
     }
 
-    if(minutos == 60){
+    if (minutos == 60) {
         minutos = 0;
         horas++;
-        if(horas < 10){horas = "0"+horas}
+        if (horas < 10) { horas = "0" + horas }
         document.getElementById("horas").innerHTML = horas; 
     }
 
-    if(horas == 24){
+    if (horas == 24) {
         horas = 0;
     }
     
-    time = setTimeout(alterTime, 1); //modificar tempo para testes
+    time = setTimeout(alterTime, 1); // modificar tempo para testes
 }
 
-//inicia o cronometro
+// inicia o cronometro
 function startTime(){
     if(!time_on){
         time_on = 1;
@@ -45,20 +43,18 @@ function startTime(){
     }
 }
 
-//para o cronometro
+// para o cronometro
 function stopTime(){
     clearTimeout(time); 
     time_on = 0;
 }
 
-//reinicia o cronometro
+// reinicia o cronometro
+// fazer com que ao clicar no resetTime() ele apague o cronometro e inicie novamente do 0
 function resetTime(){
-    
-    //fazer com que ao clicar no resetTime() ele apague o cronometro e inicie novamente do 0
-
-        document.getElementById("horas").innerHTML = "00";
-        document.getElementById("minutos").innerHTML = ":00";
-        document.getElementById("segundos").innerHTML = ":00";
-        document.getElementById("placar").innerHTML = "R$00,00";
+    document.getElementById("horas").innerHTML = "00";
+    document.getElementById("minutos").innerHTML = ":00";
+    document.getElementById("segundos").innerHTML = ":00";
+    document.getElementById("placar").innerHTML = "R$00,00";
 }
 
